@@ -16,7 +16,6 @@ const ProductList = () => {
   const {
     loading,
     products,
-    filteredProducts,
   } = useContext(CartContext);
 
   return (

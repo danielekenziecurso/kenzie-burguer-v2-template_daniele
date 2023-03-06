@@ -40,7 +40,7 @@ export const CartProvider = ({ children }: IDefaultProviderPropsCart) => {
     );
     if (!verification) {
       setCurrentSale([...currentSale, productClick as IproductsValue]);
-      toast.success('Produto adicionado com sucesso!');
+      toast.success("Produto adicionado com sucesso!");
     } else {
       toast.error('Itens já está no carrinho!');
     }
@@ -55,7 +55,6 @@ export const CartProvider = ({ children }: IDefaultProviderPropsCart) => {
 
   const removeProductsTodos = () => {
     setCurrentSale([]);
-    console.log("oi")
   };
 
   const valueReduce = currentSale.reduce(
@@ -74,7 +73,7 @@ export const CartProvider = ({ children }: IDefaultProviderPropsCart) => {
           },
         });
         setProducts(response.data);
-        toast.success('Conta criada com sucesso!');
+       
       } catch (error) {
         toast.error('Ops! Algo deu errado.');
       } finally {
