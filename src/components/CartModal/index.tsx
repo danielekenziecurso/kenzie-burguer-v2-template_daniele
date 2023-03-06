@@ -30,17 +30,28 @@ const CartModal = () => {
             </div>
           </>
         ) : (
-          
-          <div>
-            <header>
+          <>
+          <header>
+              <StyledTitle tag='h2' $fontSize='three'>
+                Carrinho de compras
+              </StyledTitle>
+              <button
+                type='button'
+                aria-label='Fechar'
+                onClick={() => setModal(false)}
+              >
+                <MdClose size={21} />
+              </button>
+            </header>
+            <div className='cartBox'>
+            <div className='emptyBox'>
             <StyledTitle tag='h3' $fontSize='three' textAlign='center'>
               Sua sacola está vazia
             </StyledTitle>
-            </header>
-            <div className='cartBox'>
             <StyledParagraph textAlign='center'>Adicione itens</StyledParagraph>
             </div>
-          </div>
+            </div>
+            </>
         )}
       </dialog>
     </StyledCartModalBox>

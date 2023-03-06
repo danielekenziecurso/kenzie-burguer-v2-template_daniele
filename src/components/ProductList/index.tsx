@@ -16,6 +16,7 @@ const ProductList = () => {
   const {
     loading,
     products,
+    filteredProducts,
   } = useContext(CartContext);
 
   return (
@@ -24,7 +25,8 @@ const ProductList = () => {
         <h1>CARREGANDO...</h1>
       ) : (
         <>
-        {products.map((items) => (
+        {
+         products.map((items) => (
             <ProductCard
             key={uuidv4()}
             burguer={items}
