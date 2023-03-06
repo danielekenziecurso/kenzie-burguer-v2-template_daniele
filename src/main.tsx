@@ -1,8 +1,10 @@
 import React from 'react';
-import { mainTheme } from './styles/theme';
 import { BrowserRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import { ThemeProvider } from 'styled-components';
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+import { mainTheme } from './styles/theme';
 import App from './App';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
@@ -10,6 +12,12 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <BrowserRouter>
       <ThemeProvider theme={mainTheme}>
         <App />
+        <ToastContainer
+          toastStyle={{
+            backgroundColor: "#343B41",
+            color: "#F8F9FA",
+          }}
+        />
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>

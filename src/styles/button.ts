@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
@@ -20,7 +21,9 @@ export const StyledButtonCSS = css<IStyledButtonProps>`
 
   transition: 0.4s;
 
+  // eslint-disable-next-line consistent-return, consistent-return
   ${({ $buttonSize }) => {
+    // eslint-disable-next-line default-case
     switch ($buttonSize) {
       case 'default':
         return css`
@@ -36,6 +39,7 @@ export const StyledButtonCSS = css<IStyledButtonProps>`
   }}
 
   ${({ theme, $buttonStyle }) => {
+    // eslint-disable-next-line default-case
     switch ($buttonStyle) {
       case 'green':
         return css`

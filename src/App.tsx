@@ -1,10 +1,14 @@
-import Router from './routes';
+import Providers from './providers/providers';
+import AppRouter from './routes/routes';
 import { GlobalStyles } from './styles/global';
 
 const App = () => (
+  // eslint-disable-next-line react/jsx-no-useless-fragment
   <>
-    <GlobalStyles />
-    <Router />
+    <Providers>
+      <GlobalStyles />
+      <AppRouter />
+    </Providers>
   </>
 );
 

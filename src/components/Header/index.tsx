@@ -1,12 +1,16 @@
 import { MdShoppingCart, MdLogout } from 'react-icons/md';
-
+import { useContext, useState } from 'react';
 import SearchForm from './SearchForm';
 import { StyledHeader } from './style';
 import LogoKenzieBurguer from '../../assets/LogoKenzieBurguer.svg';
-
 import { StyledContainer } from '../../styles/grid';
+import { CartContext } from '../../providers/CardContext/CartContext';
 
-const Header = () => (
+const Header = () => {
+ // eslint-disable-next-line no-shadow
+ const {setModal, setLoading, loading} = useContext(CartContext);
+
+  return(
   <StyledHeader>
     <StyledContainer containerWidth={1300}>
       <div className='flexGrid'>
@@ -20,20 +24,20 @@ const Header = () => (
           <div className='buttons'>
             <button
               type='button'
-              onClick={() => {
-                console.log('Criar lógica');
-              }}
+              onClick={() => setModal(true)}
             >
               <MdShoppingCart size={28} />
             </button>
-            <button type='button'>
+            <button type='button' onClick={() => setLoading(!loading) }>
               <MdLogout size={28} />
             </button>
+
           </div>
         </nav>
       </div>
     </StyledContainer>
   </StyledHeader>
 );
+}
 
 export default Header;
