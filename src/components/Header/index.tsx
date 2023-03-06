@@ -10,6 +10,7 @@ const Header = () => {
  // eslint-disable-next-line no-shadow
  const {setModal, setLoading, loading} = useContext(CartContext);
 
+
   return(
   <StyledHeader>
     <StyledContainer containerWidth={1300}>
