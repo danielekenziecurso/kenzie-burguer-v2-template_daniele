@@ -9,7 +9,7 @@ import { CartContext } from '../../providers/CardContext/CartContext';
 const Header = () => {
  // eslint-disable-next-line no-shadow
  const {setModal, setLoading, loading} = useContext(CartContext);
- console.log("oi")
+
 
   return(
   <StyledHeader>
